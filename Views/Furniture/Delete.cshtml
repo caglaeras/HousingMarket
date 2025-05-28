@@ -1,0 +1,34 @@
+﻿@model Housing.Models.Furniture
+
+@{
+    ViewData["Title"] = "Sil";
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-gradient text-white" style="background: linear-gradient(90deg, #FF416C 0%, #FF4B2B 100%);">
+            <h2 class="mb-0">Eşyayı Sil</h2>
+        </div>
+        <div class="card-body">
+            <p class="lead">Bu eşyayı silmek istediğinizden emin misiniz?</p>
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Title)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Title)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Description)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Description)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Category)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Category)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Location)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Location)</dd>
+            </dl>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger px-4 py-2 rounded-pill">Sil</button>
+                <a asp-action="Index" class="btn btn-outline-secondary px-4 py-2 rounded-pill">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

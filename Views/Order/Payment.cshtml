@@ -1,0 +1,27 @@
+﻿@model Housing.Models.PaymentViewModel
+
+<section class="container my-5">
+    <h2 class="mb-4 text-success">💳 Ödeme</h2>
+
+    <form asp-action="Payment" method="post" class="p-4 bg-light rounded shadow-sm">
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label fw-semibold"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="SelectedDeliveryId" class="form-label fw-semibold">Choose Delivery Person:</label>
+            <select asp-for="SelectedDeliveryId" asp-items="@(new SelectList(Model.DeliveryOptions, "Id", "Name"))" class="form-select">
+                <option value="">-- Select --</option>
+            </select>
+            <span asp-validation-for="SelectedDeliveryId" class="text-danger small"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 fw-bold">✅ Confirm Order</button>
+    </form>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

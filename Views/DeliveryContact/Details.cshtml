@@ -1,0 +1,26 @@
+﻿@model Housing.Models.DeliveryContact
+
+@{
+    ViewData["Title"] = "Detaylar";
+}
+
+<section class="container my-5">
+    <h2 class="mb-4 text-info">📋 Delivery Contact Details</h2>
+
+    <dl class="row bg-light p-4 rounded shadow-sm">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Phone Number</dt>
+        <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+        <dt class="col-sm-3">Service Area</dt>
+        <dd class="col-sm-9">@Model.ServiceArea</dd>
+
+        <dt class="col-sm-3">Notes</dt>
+        <dd class="col-sm-9">@Model.Notes</dd>
+    </dl>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">✏️ Edit</a>
+    <a asp-action="Index" class="btn btn-outline-secondary ms-2">⬅️ Back to List</a>
+</section>

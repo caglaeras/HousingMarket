@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Housing.Models.Order>
+
+@{
+    ViewData["Title"] = "Siparişlerim";
+}
+
+<h2>Siparişlerim</h2>
+<hr />
+
+@if (!Model.Any())
+{
+    <p>Henüz hiç sipariş vermediniz.</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var order in Model)
+        {
+            var item = order.Furniture;
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="@item.ImagePath" class="card-img-top" alt="Eşya Görseli" style="height:200px; object-fit:cover;" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text">@item.Description</p>
+                        <p class="card-text"><strong>Sipariş Tarihi:</strong> @order.OrderDate.ToShortDateString()</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,44 @@
+﻿@model Housing.Models.Furniture
+
+@{
+    ViewData["Title"] = "Detaylar";
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-gradient text-white" style="background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);">
+            <h2 class="mb-0">Eşya Detayları</h2>
+        </div>
+        <div class="card-body">
+            <!-- Görsel buraya eklendi -->
+            <div class="text-center mb-4">
+                <img src="@Model.ImagePath" alt="@Model.Title" class="img-fluid rounded" style="max-height: 300px;" />
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Title)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Title)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Description)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Description)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Category)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Category)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Condition)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Condition)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Location)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Location)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.DatePosted)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.DatePosted)</dd>
+            </dl>
+
+            <div class="mt-4">
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info px-4 py-2 rounded-pill">Düzenle</a>
+                <a asp-action="Index" class="btn btn-outline-secondary px-4 py-2 rounded-pill">Listeye Dön</a>
+            </div>
+        </div>
+    </div>
+</div>

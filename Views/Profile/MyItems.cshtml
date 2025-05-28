@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Housing.Models.Furniture>
+
+<h2>Eşyalarım</h2>
+
+@if (!Model.Any())
+{
+    <p>Henüz eklenmiş bir eşyanız yok.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Kategori</th>
+                <th>Fiyat</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Category</td>
+                    <td>@item.Price ₺</td>
+                    <td>
+                        <a asp-controller="Furniture" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                        <a asp-controller="Furniture" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
