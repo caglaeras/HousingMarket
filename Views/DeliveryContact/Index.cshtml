@@ -27,11 +27,22 @@
                     <td>@contact.ServiceArea</td>
                     <td>Telefon ile iletişime geçilmelidir.</td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@contact.Id" class="btn btn-sm btn-outline-primary me-2">✏️ Düzenle</a>
+                        @if (contact.IsSeedData == false)
+                        {
+                            <a asp-action="Edit" asp-route-id="@contact.Id"
+                               style="color: transparent; background-color: transparent; border: none; width: 80px; display: inline-block;">
+                                ✏️
+                            </a>
 
-                        <form asp-action="Delete" asp-route-id="@contact.Id" method="post" class="d-inline">
-                            <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Bu kaydı silmek istediğinize emin misiniz?');">🗑️ Sil</button>
-                        </form>
+                            <form asp-action="Delete" asp-route-id="@contact.Id" method="post" class="d-inline">
+                                <button type="submit"
+                                        style="color: transparent; background-color: transparent; border: none; width: 60px;"
+                                        onclick="return confirm('Bu kaydı silmek istediğinize emin misiniz?');">
+                                    🗑️
+                                </button>
+                            </form>
+                        }
+                        
                     </td>
                 </tr>
             }

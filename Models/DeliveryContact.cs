@@ -18,5 +18,8 @@ namespace Housing.Models
         [Display(Name = "Notes (e.g., price)")]
         public string Notes { get; set; }
 
+        public bool IsSeedData { get; set; } = false; // varsayılan olarak false gelir
+
+
     }
 }

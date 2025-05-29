@@ -12,12 +12,12 @@ namespace Housing.Data
             {
                 var contacts = new DeliveryContact[]
                 {
-                    new DeliveryContact { Name = "Hızlı Taşıma", PhoneNumber = "0555-111-2233", ServiceArea = "İstanbul Avrupa Yakası", Notes = "Fiyatta anlaşma vardır" },
-                    new DeliveryContact { Name = "Ekonomik Nakliyat", PhoneNumber = "0555-222-3344", ServiceArea = "Anadolu Yakası", Notes = "Uygun fiyatlı, zamanında teslim" },
-                    new DeliveryContact { Name = "Güler Yüzlü Kurye", PhoneNumber = "0555-333-4455", ServiceArea = "Tüm İstanbul", Notes = "Hafta sonu da hizmet verir" },
-                    new DeliveryContact { Name = "Öğrenci Dostu Taşıma", PhoneNumber = "0555-444-5566", ServiceArea = "Üniversite çevreleri", Notes = "Öğrencilere %20 indirim"  },
-                    new DeliveryContact { Name = "Metro Kargo", PhoneNumber = "0555-555-6677", ServiceArea = "İstanbul Geneli", Notes = "Aynı gün teslimat" },
-                    new DeliveryContact { Name = "Şehir İçi Mini Taşıma", PhoneNumber = "0555-666-7788", ServiceArea = "Merkez semtler", Notes = "Küçük eşyalar için ideal" }
+                    new DeliveryContact { Name = "Hızlı Taşıma", PhoneNumber = "0555-111-2233", ServiceArea = "İstanbul Avrupa Yakası", Notes = "Fiyatta anlaşma vardır", IsSeedData = true },
+                    new DeliveryContact { Name = "Ekonomik Nakliyat", PhoneNumber = "0555-222-3344", ServiceArea = "Anadolu Yakası", Notes = "Uygun fiyatlı, zamanında teslim", IsSeedData = true },
+                    new DeliveryContact { Name = "Güler Yüzlü Kurye", PhoneNumber = "0555-333-4455", ServiceArea = "Tüm İstanbul", Notes = "Hafta sonu da hizmet verir", IsSeedData = true },
+                    new DeliveryContact { Name = "Öğrenci Dostu Taşıma", PhoneNumber = "0555-444-5566", ServiceArea = "Üniversite çevreleri", Notes = "Öğrencilere %20 indirim" , IsSeedData = true },
+                    new DeliveryContact { Name = "Metro Kargo", PhoneNumber = "0555-555-6677", ServiceArea = "İstanbul Geneli", Notes = "Aynı gün teslimat" , IsSeedData = true},
+                    new DeliveryContact { Name = "Şehir İçi Mini Taşıma", PhoneNumber = "0555-666-7788", ServiceArea = "Merkez semtler", Notes = "Küçük eşyalar için ideal" , IsSeedData = true}
                 };
                 context.DeliveryContacts.AddRange(contacts);
             }
