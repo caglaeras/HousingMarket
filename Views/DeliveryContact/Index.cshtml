@@ -12,6 +12,7 @@
                 <th>Telefon Numarası</th>
                 <th>Notlar</th>
                 <th>Servis Alanı</th>
+                <th>Ücret</th>
                 <th>İşlemler</th>
 
             </tr>
@@ -25,6 +26,13 @@
                     <td>@contact.Notes</td>
                     <td>@contact.ServiceArea</td>
                     <td>Telefon ile iletişime geçilmelidir.</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@contact.Id" class="btn btn-sm btn-outline-primary me-2">✏️ Düzenle</a>
+
+                        <form asp-action="Delete" asp-route-id="@contact.Id" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Bu kaydı silmek istediğinize emin misiniz?');">🗑️ Sil</button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

@@ -12,21 +12,20 @@
         <div class="card-body">
             <p class="lead">Bu eşyayı silmek istediğinizden emin misiniz?</p>
             <dl class="row">
-                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Title)</dt>
+                <dt class="col-sm-3">Başlık</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Title)</dd>
 
-                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Description)</dt>
+                <dt class="col-sm-3">Açıklama</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Description)</dd>
 
-                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Category)</dt>
+                <dt class="col-sm-3">Kategori</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Category)</dd>
 
-                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Location)</dt>
+                <dt class="col-sm-3">Konum</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Location)</dd>
 
-                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Value)</dt>
+                <dt class="col-sm-3">Fiyat</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Value)</dd>
-
             </dl>
             <form asp-action="Delete">
                 <input type="hidden" asp-for="Id" />
