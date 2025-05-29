@@ -16,6 +16,16 @@
             <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
         </div>
 
+        <div class="mb-3">
+            <label asp-for="Notes" class="form-label fw-semibold">Notlar</label>
+            <textarea asp-for="Notes" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ServiceArea" class="form-label fw-semibold">Servis Alanı</label>
+            <input asp-for="ServiceArea" class="form-control" />
+        </div>
+
         <button type="submit" class="btn btn-primary">Kaydet</button>
         <a asp-action="Index" class="btn btn-outline-secondary ms-2">Listeye Dön</a>
     </form>
