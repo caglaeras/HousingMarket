@@ -39,7 +39,7 @@
                         {
                             <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm">Detaylar</a>
                             <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@item.Id" class="btn btn-success btn-sm">🛒</a>
-                            
+                            <a asp-controller="Furniture" asp-action="AddToFavorites" asp-route-id="@item.Id" class="btn btn-success btn-sm">Kalp</a>
                         }
                         else
                         {
