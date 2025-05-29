@@ -1,0 +1,33 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Bildirimler";
+}
+
+<section class="container my-5">
+    <div class="bg-white shadow-sm rounded p-4">
+        <h2 class="mb-4 text-info d-flex align-items-center">
+            🔔 Bildirimleriniz
+        </h2>
+
+        @if (Model.Any())
+        {
+            <ul class="list-group list-group-flush">
+                @foreach (var notification in Model)
+                {
+                    <li class="list-group-item d-flex align-items-center bg-light mb-2 rounded shadow-sm border-0">
+                        <span class="me-2 text-warning">📣</span>
+                        <span>@notification</span>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <div class="text-center text-muted p-3">
+                <span style="font-size: 1.5rem;">😴</span>
+                <p class="mt-2">Şu anda hiçbir bildiriminiz yok. Yeni gelişmeler için bizi takipte kalın!</p>
+            </div>
+        }
+    </div>
+</section>

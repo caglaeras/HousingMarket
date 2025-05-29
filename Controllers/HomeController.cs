@@ -20,6 +20,10 @@ public class HomeController : Controller
 
         return View(featuredFurniture);
     }
+    public IActionResult Privacy()
+    {
+        return View();
+    }
 }
 
 

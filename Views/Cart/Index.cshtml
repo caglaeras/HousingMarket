@@ -40,7 +40,7 @@
 
     <hr class="my-5" />
 
-    <h3 class="text-secondary mb-3">🧠 You Might Also Like</h3>
+    <h3 class="text-secondary mb-3">Ayrıca Beğenebilirsin!</h3>
 
     @if (Model.Suggestions.Any())
     {
@@ -55,7 +55,7 @@
                             @* <p class="card-text">$@suggestion.Price</p> *@
 
                             <form asp-action="AddToCart" asp-route-id="@suggestion.Id" method="post" class="mt-auto">
-                                <button class="btn btn-primary btn-sm w-100" type="submit">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100" type="submit">Sepete Ekle</button>
                             </form>
                         </div>
                     </div>
@@ -65,6 +65,6 @@
     }
     else
     {
-        <p class="text-muted">No suggestions at this time.</p>
+        <p class="text-muted">Şu an için yeni bir öneri yok.</p>
     }
 </section>

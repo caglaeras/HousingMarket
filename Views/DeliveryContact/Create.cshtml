@@ -1,23 +1,30 @@
 ﻿@model Housing.Models.DeliveryContact
 
 <section class="container my-5">
-    <h2 class="mb-4 text-success">➕ Nakliye Ekle</h2>
+    <h2 class="mb-4 text-success">➕ Nakliye Bilgisi Ekle</h2>
 
     <form asp-action="Create" method="post" class="p-4 bg-light rounded shadow-sm">
         <div class="mb-3">
-            <label asp-for="Name" class="form-label fw-semibold"></label>
+            <label asp-for="Name" class="form-label fw-semibold">Ad Soyad</label>
             <input asp-for="Name" class="form-control" />
             <span asp-validation-for="Name" class="text-danger small"></span>
         </div>
 
         <div class="mb-3">
-            <label asp-for="PhoneNumber" class="form-label fw-semibold"></label>
+            <label asp-for="PhoneNumber" class="form-label fw-semibold">Telefon Numarası</label>
             <input asp-for="PhoneNumber" class="form-control" />
             <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary">💾 Save</button>
-        <a asp-action="Index" class="btn btn-outline-secondary ms-2">⬅️ Back to List</a>
+        <div class="form-group">
+            <label asp-for="AveragePrice" class="control-label"></label>
+            <input asp-for="AveragePrice" class="form-control" />
+            <span asp-validation-for="AveragePrice" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a asp-action="Index" class="btn btn-outline-secondary ms-2">Listeye Dön</a>
     </form>
 </section>
 

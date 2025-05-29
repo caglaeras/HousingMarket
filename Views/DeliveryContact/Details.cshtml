@@ -5,22 +5,22 @@
 }
 
 <section class="container my-5">
-    <h2 class="mb-4 text-info">📋 Delivery Contact Details</h2>
+    <h2 class="mb-4 text-info">Nakliye Detayları</h2>
 
     <dl class="row bg-light p-4 rounded shadow-sm">
-        <dt class="col-sm-3">Name</dt>
+        <dt class="col-sm-3">İsim</dt>
         <dd class="col-sm-9">@Model.Name</dd>
 
-        <dt class="col-sm-3">Phone Number</dt>
+        <dt class="col-sm-3">Telefon Numarası</dt>
         <dd class="col-sm-9">@Model.PhoneNumber</dd>
 
-        <dt class="col-sm-3">Service Area</dt>
+        <dt class="col-sm-3">Servis Alanı</dt>
         <dd class="col-sm-9">@Model.ServiceArea</dd>
 
-        <dt class="col-sm-3">Notes</dt>
+        <dt class="col-sm-3">Notlar</dt>
         <dd class="col-sm-9">@Model.Notes</dd>
     </dl>
 
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">✏️ Edit</a>
-    <a asp-action="Index" class="btn btn-outline-secondary ms-2">⬅️ Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Düzenle</a>
+    <a asp-action="Index" class="btn btn-outline-secondary ms-2">Listeye Dön</a>
 </section>

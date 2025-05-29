@@ -15,6 +15,7 @@ namespace Housing.Data
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<DeliveryContact> DeliveryContacts { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

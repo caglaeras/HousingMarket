@@ -17,5 +17,8 @@ namespace Housing.Models
 
         [Display(Name = "Notes (e.g., price)")]
         public string Notes { get; set; }
+
+        [Display(Name = "Average Price")]
+        public string AveragePrice { get; set; }
     }
 }

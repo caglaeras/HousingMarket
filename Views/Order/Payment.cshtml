@@ -11,14 +11,14 @@
         </div>
 
         <div class="mb-4">
-            <label asp-for="SelectedDeliveryId" class="form-label fw-semibold">Choose Delivery Person:</label>
+            <label asp-for="SelectedDeliveryId" class="form-label fw-semibold">Nakliye Seç:</label>
             <select asp-for="SelectedDeliveryId" asp-items="@(new SelectList(Model.DeliveryOptions, "Id", "Name"))" class="form-select">
-                <option value="">-- Select --</option>
+                <option value="">-- Seç --</option>
             </select>
             <span asp-validation-for="SelectedDeliveryId" class="text-danger small"></span>
         </div>
 
-        <button type="submit" class="btn btn-success w-100 fw-bold">✅ Confirm Order</button>
+        <button type="submit" class="btn btn-success w-100 fw-bold">Siparişi Onayla!</button>
     </form>
 </section>
 

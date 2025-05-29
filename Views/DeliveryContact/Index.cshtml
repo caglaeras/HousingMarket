@@ -1,18 +1,19 @@
 ﻿@model List<Housing.Models.DeliveryContact>
 
 <section class="container my-5">
-    <h2 class="mb-4 text-primary">🚚 Nakliyeler</h2>
+    <h2 class="mb-4 text-primary">Nakliye Kayıtları</h2>
 
     <a asp-action="Create" class="btn btn-success mb-3">➕ Nakliye Ekle</a>
 
     <table class="table table-striped table-bordered shadow-sm">
         <thead class="table-dark">
             <tr>
-                <th>Name</th>
-                <th>Phone Number</th>
+                <th>Ad Soyad</th>
+                <th>Telefon Numarası</th>
                 <th>Notlar</th>
-                <th>Actions</th>
-                
+                <th>Servis Alanı</th>
+                <th>İşlemler</th>
+
             </tr>
         </thead>
         <tbody>
@@ -22,10 +23,12 @@
                     <td>@contact.Name</td>
                     <td>@contact.PhoneNumber</td>
                     <td>@contact.Notes</td>
+                    <td>@contact.ServiceArea</td>
+
                     <td>
-                        <a asp-action="Edit" asp-route-id="@contact.Id" class="btn btn-warning btn-sm me-1">✏️ Düzenle</a>
+                        <a asp-action="Edit" asp-route-id="@contact.Id" class="btn btn-warning btn-sm me-1">Düzenle</a>
                         <form asp-action="Delete" asp-route-id="@contact.Id" method="post" class="d-inline">
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');">🗑️ Sil</button>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
                         </form>
                     </td>
                 </tr>

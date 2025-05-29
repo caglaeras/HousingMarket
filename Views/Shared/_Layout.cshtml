@@ -89,9 +89,9 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
                                     <li><a class="dropdown-item" asp-controller="Furniture" asp-action="MyItems">Eşyalarım</a></li>
-                                    <li><a class="dropdown-item" href="#">Siparişlerim</a></li>
+                                    <a class="dropdown-item" asp-controller="Order" asp-action="MyOrders">Siparişlerim</a>
                                     <li><a class="dropdown-item" href="#">Beğendiklerim</a></li>
-                                    <li><a class="dropdown-item" href="#">Bildirimler</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Notification" asp-action="Index">Bildirimler</a></li>
                                     <li><hr class="dropdown-divider" /></li>
                                     <li>
                                         <form asp-area="Identity" asp-page="/Account/Logout" method="post" class="form-inline">
