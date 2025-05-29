@@ -24,13 +24,7 @@
                     <td>@contact.PhoneNumber</td>
                     <td>@contact.Notes</td>
                     <td>@contact.ServiceArea</td>
-
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@contact.Id" class="btn btn-warning btn-sm me-1">Düzenle</a>
-                        <form asp-action="Delete" asp-route-id="@contact.Id" method="post" class="d-inline">
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
-                        </form>
-                    </td>
+                    <td>Telefon ile iletişime geçilmelidir.</td>
                 </tr>
             }
         </tbody>

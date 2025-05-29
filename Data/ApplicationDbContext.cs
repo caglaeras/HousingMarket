@@ -26,7 +26,18 @@ namespace Housing.Data
                 .Property(f => f.Price)
                 .HasPrecision(18, 2);
 
-            // Optional: Add additional precision rules for other models here if needed
+            // Cascade delete kaldırıldı - çoklu cascade path hatasını önlemek için
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Order)
+                .WithMany()
+                .HasForeignKey(oi => oi.OrderId)
+                .OnDelete(DeleteBehavior.Restrict); // veya .NoAction()
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Furniture)
+                .WithMany()
+                .HasForeignKey(oi => oi.FurnitureId)
+                .OnDelete(DeleteBehavior.Restrict); // veya .NoAction()
         }
     }
 }
