@@ -35,6 +35,9 @@ namespace Housing.Models
 
         public bool IsReadOnly { get; set; } = false;
         public string? UserId { get; set; }
+
+        public bool IsFavorited { get; set; } = false;
+
     }
 
 }

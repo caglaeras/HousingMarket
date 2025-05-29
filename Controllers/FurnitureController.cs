@@ -90,7 +90,7 @@ namespace Housing.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Category,Condition,Location,Price,Value,DatePosted,ImagePath")] Furniture furniture)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Category,Condition,Location,Price,Value,DatePosted,ImagePath, IsFavorited")] Furniture furniture)
 
         {
             if (id != furniture.Id)
@@ -169,6 +169,7 @@ namespace Housing.Controllers
 
             return View(myItems);
         }
+
 
     }
 }

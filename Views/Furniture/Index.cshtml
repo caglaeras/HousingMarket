@@ -39,7 +39,11 @@
                         {
                             <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm">Detaylar</a>
                             <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@item.Id" class="btn btn-success btn-sm">🛒</a>
-                            <a asp-controller="Furniture" asp-action="AddToFavorites" asp-route-id="@item.Id" class="btn btn-success btn-sm">Kalp</a>
+                            <form asp-controller="Favorites" asp-action="AddToFavorites" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-outline-danger btn-sm">❤️</button>
+                            </form>
+
                         }
                         else
                         {
