@@ -23,6 +23,10 @@
 
                 <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Location)</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Location)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Value)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Value)</dd>
+
             </dl>
             <form asp-action="Delete">
                 <input type="hidden" asp-for="Id" />

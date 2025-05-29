@@ -40,6 +40,12 @@
                         <span asp-validation-for="Location" class="text-danger"></span>
                     </div>
                     <div class="col-md-6">
+                        <label asp-for="Value" class="form-label">Fiyat (₺)</label>
+                        <input asp-for="Value" class="form-control rounded-3" />
+                        <span asp-validation-for="Value" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
                         <label asp-for="DatePosted" class="form-label">İlan Tarihi</label>
                         <input asp-for="DatePosted" class="form-control rounded-3" />
                         <span asp-validation-for="DatePosted" class="text-danger"></span>

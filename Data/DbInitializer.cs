@@ -33,6 +33,7 @@ namespace Housing.Data
                         Category = "Depolama",
                         Condition = "İyi",
                         Location = "Kadıköy",
+                        Value = "250 TL civarı",
                         DatePosted = DateTime.Now.AddDays(-2),
                         ImagePath = "/images/furniture/kitaplik.png",
                         IsReadOnly = true
@@ -43,6 +44,7 @@ namespace Housing.Data
                         Category = "Masa",
                         Condition = "Yeni gibi",
                         Location = "Beşiktaş",
+                        Value = "250 TL",
                         DatePosted = DateTime.Now.AddDays(-1),
                         ImagePath = "/images/furniture/calismamasa.png",
                         IsReadOnly = true
@@ -53,6 +55,7 @@ namespace Housing.Data
                         Category = "Oturma",
                         Condition = "Orta",
                         Location = "Bakırköy",
+                        Value = "1000 TL civarı",
                         DatePosted = DateTime.Now.AddDays(-3),
                         ImagePath = "/images/furniture/tekli.png",
                         IsReadOnly = true
@@ -63,6 +66,7 @@ namespace Housing.Data
                         Category = "Masa",
                         Condition = "İyi",
                         Location = "Şişli",
+                        Value = "2500 TL",
                         DatePosted = DateTime.Now.AddDays(-4),
                         ImagePath = "/images/furniture/masa.png",
                         IsReadOnly = true
@@ -73,6 +77,7 @@ namespace Housing.Data
                         Category = "Depolama",
                         Condition = "Yeni gibi",
                         Location = "Üsküdar",
+                        Value = "150 TL",
                         DatePosted = DateTime.Now.AddDays(-5),
                         ImagePath = "/images/furniture/minikitaplik.png",
                         IsReadOnly = true
@@ -83,6 +88,7 @@ namespace Housing.Data
                         Category = "Oturma",
                         Condition = "İyi",
                         Location = "Ataşehir",
+                        Value = "2500 TL civarı ",
                         DatePosted = DateTime.Now.AddDays(-6),
                         ImagePath = "/images/furniture/kirmizitekli.png",
                         IsReadOnly = true

@@ -89,7 +89,9 @@ namespace Housing.Controllers
             return View(furniture);
         }
 
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Category,Condition,Location,DatePosted,ImagePath")] Furniture furniture)
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Category,Condition,Location,Price,Value,DatePosted,ImagePath")] Furniture furniture)
+
         {
             if (id != furniture.Id)
             {

@@ -31,12 +31,14 @@
                 <dt class="col-sm-3">Konum</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.Location)</dd>
 
+                <dt class="col-sm-3">Fiyat</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(m => m.Value)</dd>
+
                 <dt class="col-sm-3">İlan Tarihi</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(m => m.DatePosted)</dd>
             </dl>
 
             <div class="mt-4">
-                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info px-4 py-2 rounded-pill">Düzenle</a>
                 <a asp-action="Index" class="btn btn-outline-secondary px-4 py-2 rounded-pill">⬅️ Listeye Dön</a>
             </div>
         </div>

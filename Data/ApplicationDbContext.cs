@@ -21,10 +21,6 @@ namespace Housing.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Set decimal precision for Price in Furniture
-            modelBuilder.Entity<Furniture>()
-                .Property(f => f.Price)
-                .HasPrecision(18, 2);
 
             // Cascade delete kaldırıldı - çoklu cascade path hatasını önlemek için
             modelBuilder.Entity<OrderItem>()

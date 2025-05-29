@@ -26,7 +26,7 @@ namespace Housing.Models
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
-
+        public string? Value { get; set; }
         public DateTime DatePosted { get; set; } = DateTime.Now;
 
         public string? ImageUrl { get; set; } // Add this
