@@ -47,7 +47,7 @@ namespace Housing.Controllers
             return View(model);
         }
 
-        // Sepete Ekle + Cart sayfasına yönlendir
+        // Sepete Ekle + Cart
         public IActionResult AddToCart(int id)
         {
             var cart = HttpContext.Session.GetString(CartSessionKey);
@@ -59,7 +59,7 @@ namespace Housing.Controllers
                 HttpContext.Session.SetString(CartSessionKey, string.Join(",", ids));
             }
 
-            // Değişiklik burada: Sepete ekledikten sonra Cart sayfasına git
+            // Sepete sonrası Cart sayfası
             return RedirectToAction("Index", "Cart");
         }
 

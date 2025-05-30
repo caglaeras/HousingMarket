@@ -38,7 +38,6 @@ namespace Housing.Controllers
                 return View(model);
             }
 
-            // Example order creation (you can adjust as per your real cart logic)
             var userId = _userManager.GetUserId(User);
 
             var cartItems = _context.CartItems
@@ -58,7 +57,6 @@ namespace Housing.Controllers
                 _context.Orders.Add(order);
             }
 
-            // Clear cart after placing order
             _context.CartItems.RemoveRange(cartItems);
             await _context.SaveChangesAsync();
 

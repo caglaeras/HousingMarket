@@ -41,10 +41,10 @@
             <div class="mt-4 d-flex gap-3">
                 <a asp-action="Index" class="btn btn-outline-secondary px-4 py-2 rounded-pill">⬅️ Listeye Dön</a>
 
-                <!-- Sepete Ekle Butonu -->
+                <!-- Sepet Butonu -->
                 <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@Model.Id" class="btn btn-success px-4 py-2 rounded-pill">🛒 Sepete Ekle</a>
 
-                <!-- Favorilere Ekle Formu -->
+                <!-- Favori btn -->
                 <form asp-controller="Favorites" asp-action="AddToFavorites" method="post" style="display:inline;">
                     <input type="hidden" name="id" value="@Model.Id" />
                     <button type="submit" class="btn btn-outline-danger px-4 py-2 rounded-pill">❤️ Favorilere Ekle</button>

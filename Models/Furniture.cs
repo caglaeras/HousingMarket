@@ -29,9 +29,9 @@ namespace Housing.Models
         public string? Value { get; set; }
         public DateTime DatePosted { get; set; } = DateTime.Now;
 
-        public string? ImageUrl { get; set; } // Add this
+        public string? ImageUrl { get; set; } 
 
-        public string? ImagePath { get; set; } // Optional: use only one of ImageUrl or ImagePath
+        public string? ImagePath { get; set; } 
 
         public bool IsReadOnly { get; set; } = false;
         public string? UserId { get; set; }

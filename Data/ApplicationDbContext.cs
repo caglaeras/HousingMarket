@@ -22,18 +22,17 @@ namespace Housing.Data
             base.OnModelCreating(modelBuilder);
 
 
-            // Cascade delete kaldırıldı - çoklu cascade path hatasını önlemek için
             modelBuilder.Entity<OrderItem>()
                 .HasOne(oi => oi.Order)
                 .WithMany()
                 .HasForeignKey(oi => oi.OrderId)
-                .OnDelete(DeleteBehavior.Restrict); // veya .NoAction()
+                .OnDelete(DeleteBehavior.Restrict); 
 
             modelBuilder.Entity<OrderItem>()
                 .HasOne(oi => oi.Furniture)
                 .WithMany()
                 .HasForeignKey(oi => oi.FurnitureId)
-                .OnDelete(DeleteBehavior.Restrict); // veya .NoAction()
+                .OnDelete(DeleteBehavior.Restrict); 
         }
     }
 }

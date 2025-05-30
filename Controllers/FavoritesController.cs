@@ -40,7 +40,7 @@ namespace Housing.Controllers
                 HttpContext.Session.SetString(FavoritesSessionKey, string.Join(",", ids));
             }
 
-            return RedirectToAction("Index"); // artık favoriler sayfasına yönlendirir
+            return RedirectToAction("Index"); //  favoriler sayfasına yönlendir
         }
 
 
